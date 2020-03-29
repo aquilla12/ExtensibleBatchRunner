@@ -13,11 +13,11 @@ The following variables are available:
 * `projectFile`: the project file
 * `file`: the script file
 ##### Modifiers
-* _no modifier_: the name of the file specifed by the base variable without the extension
-* `WithExtension`: the name of the file specifed by the base variable with the extension
+* _no modifier_: the name of the file specifed by the base variable, without the extension
+* `WithExtension`: the name of the file specifed by the base variable, with the extension
 * `Extension`: the extension of the file specifed by the base variable
-* `Directory`: the direcrory where the file specifed by the base variable resides
-* `FullPath`: the absolute full path to the file specifed by the base variable
+* `Directory`: the absolute path to the direcrory where the file specifed by the base variable resides
+* `FullPath`: the absolute path to the file specifed by the base variable
 
 ##### Syntax
 When using a variable in a script you must enclose it in curly braces. e.g. `{projectFileDirectory}`.
@@ -36,6 +36,8 @@ The engine will expand variables only in the file that is run and cannot analyse
 ### Running scripts
 To run a script, right click on it in the VS Solution Explorer, and find the `Run script` option.
 
+There is currently no way to stop an executing script.
+
 ### Implementation
 This engine works by taking the file that is run and expanding any variables that it finds in it. It then saves the file in the local temp data directory as a batch script and calls it.
 The following call paramaters are used:
@@ -48,7 +50,7 @@ The standard output and error feeds are also asynchronously redirected to the `E
 Temporary batch files are deleted after being run.
 
 ## Notes
-It is recommended that before you use this extension for any production related purposes you run the [example script](../master/ExtensibleBatchRunner/.scripts/test.batscript) in order to familiarise yourself with the different variables.
+It is recommended that before you use this extension for any production related purposes you run the [example script](../master/ExtensibleBatchRunner/.scripts/test.batscript) and examine the output in order to familiarise yourself with the different variables.
 
 ## Thanks
 My thanks to [@pauer24](https://github.com/pauer24/) for their [VS Namespace Fixer extension](https://github.com/pauer24/VsNamespaceFixer/) from which I have pulled a lot of the code needed to locate project and solution files. The license for this code can be found in the `licenses` folder.
