@@ -1,0 +1,20 @@
+@echo off
+echo $(file)
+echo $(fileWithExtension)
+echo $(fileExtension)
+echo $(fileDirectory)
+echo $(fileFullPath)
+echo.
+echo $(projectFile)
+echo $(projectFileWithExtension)
+echo $(projectFileExtension)
+echo $(projectFileDirectory)
+echo $(projectFileFullPath)
+echo.
+echo $(solutionFile)
+echo $(solutionFileWithExtension)
+echo $(solutionFileExtension)
+echo $(solutionFileDirectory)
+echo $(solutionFileFullPath)
+echo.
+echo %0
