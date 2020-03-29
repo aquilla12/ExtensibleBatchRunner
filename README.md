@@ -30,7 +30,7 @@ When writing scripts for this extewnsion you must use a `.batscript` extension. 
 _See [Implementation](#Implementation) below for the reasons for these suggestions._
 The engine will expand variables only in the file that is run and cannot analsye any scripts called from it. Therefore, if you require looping you should do one of the following:
 * Write your child scripts as normal `.bat`s and use the `{fileDirectory}` variable to locate other scripts and run them from your main script, passing them any paths they need as parameters.
-* For recursive scripts that must call themselves, use the `%0` bacth variable, as the `{file}` variable will point to the original script file with unexpanded variables.
+* For recursive scripts that must call themselves, use the `%0` batch variable, as the `{file}` variable will point to the original script file with unexpanded variables.
 
 ### Running scripts
 To run a script, right click on it in the VS Solution Explorer, and find the `Run script` option.
@@ -43,6 +43,8 @@ The following call paramaters are used:
 * `WorkingDirectory`: The direcrory where the original script file resides
 
 The standard output and error feeds are also asynchronously redirected to the `Extensible batch engine` pane in the VS Output window in real time.
+
+Temporary batch files are deleted after being run.
 
 ## Notes
 It is recommended that before you use this extension for any production related purposes you run the [example script](../master/ExtensibleBatchRunner/.scripts/test.batscript) in order to familiarise yourself with the different variables.
