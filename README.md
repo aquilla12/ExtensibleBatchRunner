@@ -20,7 +20,7 @@ The following variables are available:
 * `FullPath`: the absolute path to the file specifed by the base variable
 
 ##### Syntax
-When using a variable in a script you must enclose it in curly braces. e.g. `{projectFileDirectory}`.
+When using a variable in a script, you must prefix it with a `$` and enclose it in brackets. e.g. `$(projectFileDirectory)`.
 
 Expanded variables are automatically wrapped in double quotes. At this time there is no way to override this behaviour, but there may be in future versions (happy to accept contributions).
 
@@ -30,8 +30,8 @@ When writing scripts for this extension you must use the `.batscript` file exten
 _See the [Implementation](#Implementation) section below for the reasons for these suggestions._
 
 The engine will expand variables only in the file that is run and cannot analyse any scripts called from it. Therefore, if you require looping you should do one of the following:
-* Write your child scripts as normal `.bat`s and use the `{fileDirectory}` variable to locate other scripts and run them from your main script, passing them any paths they need as parameters.
-* For recursive scripts that must call themselves, use the `%0` batch variable, as the `{file}` variable will point to the original script file with unexpanded variables.
+* Write your child scripts as normal `.bat`s and use the `$(fileDirectory)` variable to locate other scripts and run them from your main script, passing them any paths they need as parameters.
+* For recursive scripts that must call themselves, use the `%0` batch variable, as the `$(file)` variable will point to the original script file with unexpanded variables.
 
 ### Running scripts
 To run a script, right click on it in the VS Solution Explorer, and find the `Run script` option.
