@@ -51,4 +51,4 @@ Temporary batch files are deleted after being run.
 It is recommended that before you use this extension for any production related purposes you run the [example script](../master/ExtensibleBatchRunner/.scripts/test.batscript) in order to familiarise yourself with the different variables.
 
 ## Thanks
-My thanks to [@pauer24](https://github.com/pauer24/) for his [VS Namespace Fixer extension](https://github.com/pauer24/VsNamespaceFixer/) from which I have pulled a lot of the code needed to locate project and solution files. The license for this code can be found in the `licenses` folder.
+My thanks to [@pauer24](https://github.com/pauer24/) for their [VS Namespace Fixer extension](https://github.com/pauer24/VsNamespaceFixer/) from which I have pulled a lot of the code needed to locate project and solution files. The license for this code can be found in the `licenses` folder.
