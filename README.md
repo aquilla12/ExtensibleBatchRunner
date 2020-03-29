@@ -1,5 +1,5 @@
 # Extensible Batch Runner
-An extension for Microsoft Visual Studio on Windows to provide an implemenation of Visual Studio path macros for project batch scripts.
+An extension for Microsoft Visual Studio on Windows to provide an implementation of Visual Studio path macros for project batch scripts.
 
 ## How it works
 ### Writing scripts
@@ -24,10 +24,10 @@ When using a variable in a script you must enclose it in curly braces. e.g. `{pr
 
 Expanded variables are automatically wrapped in double quotes. At this time there is no way to override this behaviour, but there may be in future versions (happy to accept contributions).
 
-When writing scripts for this extewnsion you must use a `.batscript` extension. It is also recomended to put all your scripts in a `.scripts` folder in your project direcrory, but scripts anywhere in the project tree are supported, as long as they are visible to Visual Studio.
+When writing scripts for this extension you must use the `.batscript` file extension. It is also recomended to put all your scripts in a `.scripts` folder in your project direcrory, but scripts anywhere in the project tree are supported, as long as they are visible to Visual Studio.
 
 #### Looping
-_See [Implementation](#Implementation) below for the reasons for these suggestions._
+_See the [Implementation](#Implementation) section below for the reasons for these suggestions._
 The engine will expand variables only in the file that is run and cannot analsye any scripts called from it. Therefore, if you require looping you should do one of the following:
 * Write your child scripts as normal `.bat`s and use the `{fileDirectory}` variable to locate other scripts and run them from your main script, passing them any paths they need as parameters.
 * For recursive scripts that must call themselves, use the `%0` batch variable, as the `{file}` variable will point to the original script file with unexpanded variables.
