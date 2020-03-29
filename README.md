@@ -29,7 +29,7 @@ When writing scripts for this extension you must use the `.batscript` file exten
 #### Looping
 _See the [Implementation](#Implementation) section below for the reasons for these suggestions._
 
-The engine will expand variables only in the file that is run and cannot analsye any scripts called from it. Therefore, if you require looping you should do one of the following:
+The engine will expand variables only in the file that is run and cannot analyse any scripts called from it. Therefore, if you require looping you should do one of the following:
 * Write your child scripts as normal `.bat`s and use the `{fileDirectory}` variable to locate other scripts and run them from your main script, passing them any paths they need as parameters.
 * For recursive scripts that must call themselves, use the `%0` batch variable, as the `{file}` variable will point to the original script file with unexpanded variables.
 
