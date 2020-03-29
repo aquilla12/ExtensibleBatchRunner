@@ -39,7 +39,7 @@ To run a script, right click on it in the VS Solution Explorer, and find the `Ru
 ### Implementation
 This engine works by taking the file that is run and expanding any variables that it finds in it. It then saves the file in the local temp data directory as a batch script and calls it.
 The following call paramaters are used:
-* `UseShellExecute`: _true_
+* `UseShellExecute`: _false_
 * `CreateNoWindow`: _true_
 * `WorkingDirectory`: The direcrory where the original script file resides
 
